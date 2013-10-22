@@ -21,6 +21,8 @@
 		7F1A762518165CE500371E12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1A760718165CE500371E12 /* UIKit.framework */; };
 		7F1A762D18165CE500371E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A762B18165CE500371E12 /* InfoPlist.strings */; };
 		7F1A762F18165CE500371E12 /* ShareKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A762E18165CE500371E12 /* ShareKitTests.m */; };
+		7F6E02461816604B004A165C /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6E02431816604B004A165C /* libWeiboSDK.a */; };
+		7F6E02471816604B004A165C /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F6E02441816604B004A165C /* WeiboSDK.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		7F1A762A18165CE500371E12 /* ShareKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShareKitTests-Info.plist"; sourceTree = "<group>"; };
 		7F1A762C18165CE500371E12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F1A762E18165CE500371E12 /* ShareKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareKitTests.m; sourceTree = "<group>"; };
+		7F6E02431816604B004A165C /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		7F6E02441816604B004A165C /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		7F6E02451816604B004A165C /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 				7F1A760618165CE500371E12 /* CoreGraphics.framework in Frameworks */,
 				7F1A760818165CE500371E12 /* UIKit.framework in Frameworks */,
 				7F1A760418165CE500371E12 /* Foundation.framework in Frameworks */,
+				7F6E02461816604B004A165C /* libWeiboSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +88,7 @@
 		7F1A75F718165CE500371E12 = {
 			isa = PBXGroup;
 			children = (
+				7F6E02421816604B004A165C /* libWeiboSDK */,
 				7F1A760918165CE500371E12 /* ShareKit */,
 				7F1A762818165CE500371E12 /* ShareKitTests */,
 				7F1A760218165CE500371E12 /* Frameworks */,
@@ -150,6 +157,16 @@
 				7F1A762B18165CE500371E12 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F6E02421816604B004A165C /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7F6E02431816604B004A165C /* libWeiboSDK.a */,
+				7F6E02441816604B004A165C /* WeiboSDK.bundle */,
+				7F6E02451816604B004A165C /* WeiboSDK.h */,
+			);
+			path = libWeiboSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +248,7 @@
 				7F1A761C18165CE500371E12 /* Images.xcassets in Resources */,
 				7F1A760E18165CE500371E12 /* InfoPlist.strings in Resources */,
 				7F1A761718165CE500371E12 /* Main.storyboard in Resources */,
+				7F6E02471816604B004A165C /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +399,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareKit/ShareKit-Prefix.pch";
 				INFOPLIST_FILE = "ShareKit/ShareKit-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/user1/Documents/Project/ShareKit/libWeiboSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,6 +416,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareKit/ShareKit-Prefix.pch";
 				INFOPLIST_FILE = "ShareKit/ShareKit-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/user1/Documents/Project/ShareKit/libWeiboSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -460,6 +486,7 @@
 				7F1A763418165CE500371E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F1A763518165CE500371E12 /* Build configuration list for PBXNativeTarget "ShareKitTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +495,7 @@
 				7F1A763718165CE500371E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
