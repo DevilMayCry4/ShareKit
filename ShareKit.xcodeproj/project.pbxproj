@@ -23,6 +23,7 @@
 		7F1A762F18165CE500371E12 /* ShareKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A762E18165CE500371E12 /* ShareKitTests.m */; };
 		7F6E02461816604B004A165C /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6E02431816604B004A165C /* libWeiboSDK.a */; };
 		7F6E02471816604B004A165C /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F6E02441816604B004A165C /* WeiboSDK.bundle */; };
+		7F6E0251181664C7004A165C /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6E024E181664C7004A165C /* libWeChatSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,9 @@
 		7F6E02431816604B004A165C /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		7F6E02441816604B004A165C /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		7F6E02451816604B004A165C /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		7F6E024E181664C7004A165C /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		7F6E024F181664C7004A165C /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		7F6E0250181664C7004A165C /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				7F1A760818165CE500371E12 /* UIKit.framework in Frameworks */,
 				7F1A760418165CE500371E12 /* Foundation.framework in Frameworks */,
 				7F6E02461816604B004A165C /* libWeiboSDK.a in Frameworks */,
+				7F6E0251181664C7004A165C /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,7 @@
 		7F1A75F718165CE500371E12 = {
 			isa = PBXGroup;
 			children = (
+				7F6E024D181664C7004A165C /* SDKExport */,
 				7F6E02421816604B004A165C /* libWeiboSDK */,
 				7F1A760918165CE500371E12 /* ShareKit */,
 				7F1A762818165CE500371E12 /* ShareKitTests */,
@@ -167,6 +173,16 @@
 				7F6E02451816604B004A165C /* WeiboSDK.h */,
 			);
 			path = libWeiboSDK;
+			sourceTree = "<group>";
+		};
+		7F6E024D181664C7004A165C /* SDKExport */ = {
+			isa = PBXGroup;
+			children = (
+				7F6E024E181664C7004A165C /* libWeChatSDK.a */,
+				7F6E024F181664C7004A165C /* WXApi.h */,
+				7F6E0250181664C7004A165C /* WXApiObject.h */,
+			);
+			path = SDKExport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +418,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/user1/Documents/Project/ShareKit/libWeiboSDK,
+					/Users/user1/Documents/Project/ShareKit/SDKExport,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -419,6 +436,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/user1/Documents/Project/ShareKit/libWeiboSDK,
+					/Users/user1/Documents/Project/ShareKit/SDKExport,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
