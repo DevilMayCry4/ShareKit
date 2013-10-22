@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "WeiboSDK.h"
 @interface ViewController ()
 
 @end
@@ -18,6 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)pushWeibo:(id)sender
+{
+
 }
 
 - (void)didReceiveMemoryWarning
